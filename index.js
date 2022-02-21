@@ -15,7 +15,7 @@ app.use(express.static('public'))
 //Created Route -- request, respond works just as well
 
 app.get('/', (req, res) => {
-    res.send('Node server')
+    res.sendFile('/public/html-page.html', {root: __dirname})
 })
 
 app.get('/html-page', (req, res) => {
@@ -26,9 +26,9 @@ app.get('/html-page', (req, res) => {
     }
 })
 
-app.get('/another-page', (req, res) => {
+app.get('/project-page', (req, res) => {
     try {
-        res.sendFile('/public/another-page.html', {root:__dirname} )
+        res.sendFile('/public/project-page.html', {root:__dirname} )
     } catch (err) {
         console.log(err)
     }
