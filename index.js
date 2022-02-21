@@ -15,7 +15,7 @@ app.use(express.static('public'))
 //Created Route -- request, respond works just as well
 
 app.get('/', (req, res) => {
-    res.sendFile('/public/html-page.html', {root: __dirname})
+    res.sendFile('/public/index.html', {root: __dirname})
 })
 
 app.get('/index.html', (req, res) => {
