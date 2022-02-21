@@ -52,7 +52,7 @@ h2 {
     font-size: 20px;
     text-align: justify;
     width: 780px;
-    overflow: hidden;
+    overflow: visible;
     transition: 0.5s;
 }
 

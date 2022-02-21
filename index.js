@@ -11,16 +11,17 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(express.static('public'))
+app.use(express.static('/index.html'))
 
 //Created Route -- request, respond works just as well
 
 app.get('/', (req, res) => {
-    res.sendFile('/public/index.html', {root: __dirname})
+    res.sendFile('/index.html', {root: __dirname})
 })
 
 app.get('/index.html', (req, res) => {
     try {
-        res.sendFile('/public/index.html', {root:__dirname})
+        res.sendFile('/index.html', {root:__dirname})
     } catch (err) {
         console.log(err)
     }
