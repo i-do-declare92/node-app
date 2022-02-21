@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3000
 app.use(express.static('public'))
 
 //Created Route -- request, respond works just as well
+
 app.get('/', (req, res) => {
     res.send('Node server')
 })
