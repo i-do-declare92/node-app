@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
     res.sendFile('/public/html-page.html', {root: __dirname})
 })
 
-app.get('/html-page', (req, res) => {
+app.get('/index.html', (req, res) => {
     try {
-        res.sendFile('/public/html-page.html', {root:__dirname})
+        res.sendFile('/public/index.html', {root:__dirname})
     } catch (err) {
         console.log(err)
     }
