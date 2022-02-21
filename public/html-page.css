@@ -1,0 +1,72 @@
+
+
+body{
+    
+    background: -webkit-radial-gradient(circle, teal, purple, teal);
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.fold {
+    width: 800px;
+    margin: 90px auto;
+    color: black;
+    background: -webkit-linear-gradient(100deg, teal, lightpink, purple);
+    padding: 45px 45px;
+}
+
+.fold .contain {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.fold .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.fold .label::before {
+    content: "+";
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+.fold .content {
+    position: relative;
+    background: lightslategray;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.fold hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid black;
+}
+
+.fold .contian.active .content {
+    height: 150px;
+}
+
+.fold .contain.active .label::before {
+    content: "-";
+    font-size: 30px;
+}
